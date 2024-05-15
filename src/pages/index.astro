@@ -1,17 +1,23 @@
 ---
 import Badge from "../components/Badge.astro";
+import Hero from "../components/Hero.astro";
+import SectionContainer from "../components/SectionContainer.astro";
 import Layout from "../layouts/Layout.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  <main>
-    <section class="w-full lg:w-[740px] mx-auto py-10">
+  <main class="w-full">
+    <section class="w-full py-10 bg-indigo-950">
       <h1 class="text-white text-5xl font-bold flex justify-center flex-row">
-        Hola soy bla bla <div class="flex justify-center items-center gap-x-4">
-					<Badge>Disponible para trabajar</Badge>
-				</div>	
+        Hola, soy Andres Sanchez
       </h1>
-      <h2>sadasdasd</h2>
+      <h2 class="text-white flex justify-center flex-row">
+        +8 años de experiencia. Ingeniero en Informática y Programador Front End de Buenos Aires, Argentina 🇦🇷.<br>
+        Especializado en el desarrollo de aplicaciones web y mobile.</h2>
     </section>
-  </main>
+    <SectionContainer class="py-16 md:py-36">
+      <Hero>
+        </slot>
+      </Hero>
+    </SectionContainer>  </main>
 </Layout>
